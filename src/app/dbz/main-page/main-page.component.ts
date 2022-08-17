@@ -8,20 +8,6 @@ import { DbzService } from '../services/dbz.service';
   styleUrls: ['./main-page.component.css']
 })
 export class MainPageComponent{
-
-  nuevoRegistro: Personaje = {
-    nombre: '',
-    poder: 0
+  constructor(){
   }
-  
-  public get personajes() : Personaje[] {
-    return this.dbzService.personajes;
-  }
-  
-
-  agregarNuevoPersonaje(argumento: Personaje){
-    this.personajes.push(argumento)
-  }
-
-  constructor(private dbzService: DbzService){}
 }
